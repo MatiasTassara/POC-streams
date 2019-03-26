@@ -14,11 +14,22 @@ public class Main {
         List<Persona> personas;
         personas = Arrays.asList(a,b,c,d);
         System.out.println(String.format("Personas %s",personas));
+
+        //mayores de 21
         System.out.println(String.format("Mayores a 21: %s",personas.stream()
         .filter(p->p.getEdad() > 21)
         .collect(Collectors.toList())));
-
-
+        //mayores de 18
+        System.out.println(String.format("Menores a 18 %s", personas.stream()
+                .filter(p -> p.getEdad() < 18)
+                .collect(Collectors.toList()))
+        );
+        //mayores de 21 y documento > 20000000
+        System.out.println(String.format("Mayores a 21 y DNI mayor a 20.000.000 %s", personas.stream()
+                .filter(persona -> persona.getEdad() > 21)
+                .filter(persona -> persona.getDni() > 20000000)
+                .collect(Collectors.toList()))
+        );
 
 
     }
