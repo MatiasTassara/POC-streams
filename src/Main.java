@@ -17,7 +17,7 @@ public class Main {
 
         //mayores de 21
         System.out.println(String.format("Mayores a 21: %s",personas.stream()
-                .filter(p->p.getEdad() > 21)
+                .filter(p -> p.getEdad() > 21)
                 .collect(Collectors.toList())));
         //mayores de 18
         System.out.println(String.format("Menores a 18 %s", personas.stream()
